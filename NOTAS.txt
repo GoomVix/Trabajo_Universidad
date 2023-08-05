@@ -8,3 +8,262 @@ P>En general, los programas escritos en C++ tienen una estructura (básica) comp
       <li>
         Declaraciones de Funciones
       </li>S
+
+
+///////
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluacion UNEXCA C++</title>
+    <!--FONT AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!--FONT HANDJET-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@300;400;500&display=swap" rel="stylesheet">
+    <!--CUSTON CSS-->
+    <link rel="stylesheet" href="Css/estilo.css">
+</head>
+<body>
+  <div class="container">
+    <nav class="nav-main">
+      <img src="/Index/Css/Img/c- (1).png" alt="Universidad logo" class="nav-logo">
+      <ul class="nav-menu">
+
+
+        <li>
+          <a href="#">Parte 1</a>
+        </li>
+        <li>
+          <a href="#">Parte 2</a>
+        </li>
+        <li>
+          <a href="#">Parte 3</a>
+        </li>
+        <li>
+          <a href="#">Parte 4</a>
+        </li>
+        <li>
+          <a href="#">Parte 5</a>
+        </li>
+
+      </ul>
+
+
+      <ul class="nav-menu-right">
+        <li>
+          <a href="#">
+            <i class="fas fa-search"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!--SHOWCASE-->
+    <header class="showcase">
+      <h1>PROGRAMACIÓN EN C++</h1>
+      <a href="#" class="btn">Ver Mas <i class="fas fa-angle-double-right"></i></a>
+    </header>
+    <!--Parte 1-->
+    <h1>Parte 1</h1>
+    <hr class="hr-parte1">
+    <br>
+    <br>
+    <h2>Estructura de un Programa en C++</h2>
+    
+    <br>
+    
+    <p>En general, los programas escritos en C++ tienen una estructura (básica) compuesta por tres secciones:</p>
+    <li>Directivas de Preprocesador</li>
+    <li>Declaraciones Globales</li>
+    <li>Declaración de Funciones</li>
+    <br>
+    
+    <h3>Directivas de Preprocesador</h3>
+    
+    <br>
+    
+    <p>Los compiladores de C++ proporcionan bibliotecas de funciones, y cada biblioteca de funciones tiene asociada un archivo de definición que se denomina cabecera. Para utilizar algo de una biblioteca en un programa (por ejemplo, una función), hay que colocar al principio del programa una directiva de preprocesamiento seguida de la cabecera de la biblioteca entre signos de "menor que" y "mayor que" (<>).</p>
+    
+    <br>
+    
+    <p>A continuación se muestra un típico ejemplo de una directiva de preprocesador:</p>
+    
+    <!-- jorge ejemplo abajo-->
+    <div class="img-ejem"><img src="/Index/Css/Img/direcivas de preprocesador.png" alt=""></div>
+    
+    <br>
+    
+    <p>En el ejemplo anterior, la directiva invocada es include y la cabecera iostream, e indican al preprocesador que debe incluir la librería iostream a nuestro programa. Cabe señalar que todas las directivas comienzan con el símbolo numeral #. Dentro de las directivas de preprocesador se encuentran:</p>
+    
+    <br>
+
+    <li>Macros de preprocesador (#define y #undef)</li>
+    <li>Inclusiones condicionales (#ifdef, #ifndef, #if, #endif, #else and #elif)</li>
+    <li>Control (#line)</li>
+    <li>Error (#error)</li>
+    <li>Inclusión de fichero (#include)</li>
+    <li>Pragma (#pragma)</li>
+
+    <br>
+
+    <h4>Macros de Preprocesador</h4>
+
+    <br>
+
+    <p>Para definir macros de preprocesador, usamos la directiva #define. La sintaxis es:</p>
+    <!-- jorge ejemplo abajo-->
+    <div class="img-ejem"><img src="/Index/Css/Img/Macros de preprocesador.png" alt=""></div>
+
+    <br>
+
+    <p>Cuando el procesador encuentra esta directiva, este reemplaza todas las ocurrencias del identificador y son sustituidas por reemplazo. Cuando se requiere desactivar una macro, a partir de cierta parte del código, se utiliza la directiva #undef. La sintaxis es:</p>
+    <!-- jorge ejemplo abajo-->
+    <div class="img-ejem"><img src="/Index/Css/Img/macro nombre.png" alt=""></div>
+
+    <br>
+
+    <h4>Inclusiones Condicionales</h4>
+    <p>Estas directivas permiten incluir o descartar partes de código, si se cumplen algunas condiciones.</p>
+    <li>#ifdef: Permite que una sección del programa sea compilada solo si la macro especificada como parámetro ha sido definida, sin importar el valor de esta. Por ejemplo:</li>
+    <!--jorge ejemplo abajo-->
+    <div class="img-ejem"><img src="/Index/Css/Img/incluciones condicionales ejemplos.png" alt=""></div>
+     
+    <br>
+
+    <p>El ejemplo anterior indica que, si la macro TABLE_SIZE se encuentra definida, entonces procede a la creación de una matriz de enteros de tamaño TABLE_SIZE. Cabe señalar que el fin para esta directiva es la directiva #endif</p>
+    <li>#ifndef: Permite realizar exactamente todo lo contrario a #ifdef. La lineas de código que se encuentren entre #ifndef y #endif, serán ejecutadas siempre y cuando la macro señalada como parámetro de #ifndef no se encuentre definida aun. Por ejemplo:</li>
+    <!-- jorge ejemplo abajo-->
+    <div class="img-ejem"><img src="/Index/Css/Img/ice.png" alt=""></div>
+
+    <br>
+
+    <p>En el ejemplo anterior, se indica que si la macro TABLE_SIZE no está definida aún, entonces se define. Cabe señalar que el fin para la directiva #ifndef es, al igual que #ifdef, #endif.</p>
+    <li>#if, #else y #elif (o else if): Estas directivas tienen el mismo significado que los comandos condicionales de cualquier lenguaje de programación. Por ejemplo:</li>
+    <!-- jorge ejemplo abajo-->
+    <div class="img-ejem"><img src="/Index/Css/Img/grande size.png" alt=""></div>
+     
+    <br>
+
+    <p>En el ejemplo anterior, se muestra el uso de todas las directivas condicionales del preprocesador.</p>
+
+    <br>
+
+    <h4>Control</h4>
+    
+    <br>
+
+    <p>Cuando compilamos un programa y un error ocurre durante el proceso de compilación, el compilador muestra un mensaje de error con las referencias al nombre del archivo donde ocurrió el error y un número de línea, por lo que es más fácil encontrar el código que genera el error. La directiva #line nos permite controlar ambas cosas, los números de línea en los archivos de código, así como el nombre del archivo que queremos que aparece cuando un error ocurre. Su formato es:</p>
+    <!-- jorge ejemplo abajo-->
+    <div class="img-ejem"><img src="/Index/Css/Img/control img.png" alt=""></div>
+
+    <br>
+
+    <p>Donde número es el nuevo número de línea que se asignará a la siguiente línea de código. Los números de línea de las líneas sucesivas se incrementarán uno por uno desde este punto en adelante."nombre_de_archivo" es un parámetro opcional que permite redefinir el nombre del archivo que se mostrará. Por ejemplo:</p>
+    <!-- jorge ejemplo abajo-->
+    <div class="img-ejem"><img src="/Index/Css/Img/control img 2.png" alt=""></div>
+
+    <br>
+
+    <p>Este código generará un error que se mostrará como un error en el archivo de "asignación de variable", línea 20.</p>
+
+    <br>
+
+    <h4>Error</h4>
+    
+    <br>
+
+    <p>Esta directiva cancela la compilación cuando es encontrada, generando un error de compilación que puede ser especificado según un parámetro de un ejercicio. Por ejemplo:</p>
+    <!-- jorge ejemplo abajo-->
+    <div class="img-ejem"><img src="/Index/Css/Img/error captur.png" alt=""></div>
+
+    <br>
+
+    <p>En el ejemplo anterior, la compilación es cancelada si la macro __cplusplus no está definida (Esta macro es definida por defecto en todos los los compiladores de C++).</p>
+
+    <br>
+
+    <h4>Inclusión de Fichero</h4>
+    
+    <br>
+
+    <p>Cuando el preprocesador encuentra la directiva #include, este reemplaza todas las ocurrencias de ella por el archivo o cabecera especificada. Existen dos formas de utilizar #include:</p>
+    <li>#include <cabecera>: Es usado para incluir las cabeceras proporcionadas por defecto, por ejemplo, la librería estándar (string, iostream, etc.).</li>
+    <li>#include "archivo" : Es usado para incluir archivos.</li>
+
+    <br>
+
+    <h4>Pragma</h4>
+
+    <br> 
+
+    <p>La directiva #pragma es utilizada para especificar las distintas opciones del compilador. Estas opciones son especificadas dependiendo del compilador que se utilice. Si el compilador no permite un argumento para #pragma, esto es ignorado y no genera un error de sintaxis.</p>
+
+    <br>
+
+    <h3>Declaraciones Globales</h3>
+
+    <br>
+
+    <p>En esta sección se declaran todas variables y cabeceras de funciones que seran vistas de manera global, es decir, que su alcance es total en el programa. Por ejemplo:</p>
+    <!-- jorge ejemplo abajo-->
+    <div class="img-ejem"><img src="/Index/Css/Img/declaracion globales.png" alt=""></div>
+
+    <br>
+
+    <p>En el ejemplo anterior, se definen (ademas de las directivas de preprocesador, vistas en la sección anterior) una variable y una función. La variable autor podrá ser utilizada por todas las funciones del programa. Mientras que la función "adicion" solo fue declarada de la forma "inline". Una función se dice declarada "inline" cuando solo se señala su nombre y sus tipos de entrada y salida. Su definición completa se reserva para mas adelante.</p>
+
+    <br>
+
+    <h3>Declaración de Funciones</h3>
+
+    <br>
+
+    <p>La ultima sección del programa es la declaración de funciones. La primera función que se debe declarar es la función principal o "main". La función main es la mas importante, pues es la que es invocada cuando el programa se ejecuta. Toda instrucción que no sea declarada dentro de esta, simplemente no sera considerada. A continuación de la función "main", se permite la definición completa de las funciones declaradas en la sección de declaraciones globales. En el siguiente ejemplo, mostraremos la estructura definitiva de un programa y la declaración completa de sus funciones:</p>
+    <!-- jorge ejemplo abajo-->
+    <div class="img-ejem"><img src="/Index/Css/Img/declaracion de funciones.png" alt=""></div>
+    
+    <br>
+
+    <p>Los parámetros de entrada de la función main es algo que se abordará mas adelante.</p>
+
+    <br>
+    
+    <!--Parte 2-->
+
+    <h1>PARTE 2</h1>
+    <hr class="hr-parte1">
+    <!--agregar parte 2 del trabajo-->
+    
+    <br>
+    
+    <!--Parte 3-->
+
+    <h1>PARTE 3</h1>
+    <hr class="hr-parte1">
+    
+    <br>
+
+    <h2>Estructuras de Control en C++</h2>
+
+    <br>
+
+    <p>Las estructuras de control determinan la secuencia en la que se ejecutarán las instrucciones de un programa.
+      Las estructuras de control se dividen en tres categorías en función del flujo de ejecución:</p>
+    <li>Estructura Secuencial.</li>
+    <li>Estructura Alternativa o condicional.</li>
+    <li>Estructura Iterativa o repetitiva.</li>
+
+    <br>
+
+    <h3>Estructura Secuencial</h3>
+
+    <br>
+
+    <p>La estructura secuencial está formada por una secuencia de instrucciones que se ejecutan en orden una a continuación de la otra. La estructura secuencial está formada por una secuencia de instrucciones que se ejecutan en orden una a continuación de la otra. Cada una de las instrucciones están separadas por el carácter punto y coma (;). No obstante, en algunos casos nos interesará agrupar en un bloque una serie de instrucciones, como veremos al explicar las estructuras de selección y de iteración. El bloque de sentencias se define por el carácter llave de apertura ({) para marcar el inicio del mismo, y el carácter llave de cierre (}) para marcar el final. Por ejemplo:</p>
+
+
+  </div>
+ 
