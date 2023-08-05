@@ -53,10 +53,11 @@
       <a href="#" class="btn">Ver Mas <i class="fas fa-angle-double-right"></i></a>
     </header>
     <!--Parte 1-->
-    <h2>Parte1</h2>
+    <h1>Parte 1</h1>
+    <hr class="hr-parte1">
     <br>
     <br>
-    <h3>Estructura de un programa</h3>
+    <h2>Estructura de un Programa en C++</h2>
     
     <br>
     
@@ -94,7 +95,7 @@
 
     <br>
 
-    <h3>Macros de preprocesador</h3>
+    <h4>Macros de Preprocesador</h4>
 
     <br>
 
@@ -110,7 +111,34 @@
 
     <br>
 
-    <h3>Inclusiones condicionales</h3>
+    <h4>Inclusiones Condicionales</h4>
+    <p>Estas directivas permiten incluir o descartar partes de código, si se cumplen algunas condiciones.</p>
+    <li>#ifdef: Permite que una sección del programa sea compilada solo si la macro especificada como parámetro ha sido definida, sin importar el valor de esta. Por ejemplo:</li>
+    <!--jorge ejemplo abajo-->
+    <div>ejemplo de for</div>
+     
+    <br>
+
+    <p>El ejemplo anterior indica que, si la macro TABLE_SIZE se encuentra definida, entonces procede a la creación de una matriz de enteros de tamaño TABLE_SIZE. Cabe señalar que el fin para esta directiva es la directiva #endif</p>
+    <li>#ifndef: Permite realizar exactamente todo lo contrario a #ifdef. La lineas de código que se encuentren entre #ifndef y #endif, serán ejecutadas siempre y cuando la macro señalada como parámetro de #ifndef no se encuentre definida aun. Por ejemplo:</li>
+    <!-- jorge ejemplo abajo-->
+    <div>ejemplo de for</div>
+
+    <br>
+
+    <p>En el ejemplo anterior, se indica que si la macro TABLE_SIZE no está definida aún, entonces se define. Cabe señalar que el fin para la directiva #ifndef es, al igual que #ifdef, #endif.</p>
+    <li>#if, #else y #elif (o else if): Estas directivas tienen el mismo significado que los comandos condicionales de cualquier lenguaje de programación. Por ejemplo:</li>
+    <!-- jorge ejemplo abajo-->
+    <div>ejemplo de for</div>
+     
+    <br>
+
+    <p>En el ejemplo anterior, se muestra el uso de todas las directivas condicionales del preprocesador.</p>
+
+    <br>
+
+    <h4>Control</h4>
+    <p></p>
   </div>
  
   
