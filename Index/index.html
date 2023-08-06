@@ -4,19 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evaluacion UNEXCA C++</title>
-    <!--FONT AWESOME-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <!--FONT HANDJET-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@300;400;500&display=swap" rel="stylesheet">
     <!--CUSTON CSS-->
     <link rel="stylesheet" href="Css/estilo.css">
 </head>
 <body>
   <div class="container">
     <nav class="nav-main">
-      <img src="/Index/Css/Img/c- (1).png" alt="Universidad logo" class="nav-logo">
+      <img src="/Css/Img/c.png" alt="Universidad logo" class="nav-logo">
       <ul class="nav-menu">
 
 
@@ -522,6 +516,144 @@
    <h1 class="partes" id="parte5">Parte 5</h1>
    <hr class="hr-parte1">
    <br>
+      <h3>Array Unidimensionales</h3>
+      <br>
+      <p>Un array (unidimensional, también denominado vector) es una variable estructurada
+        formada de un número "n" de variables simples del mismo tipo que son denominadas
+        los componentes o elementos del array. El número de componentes "n" es, entonces, la
+        dimensión del array. De igual manera que en matemáticas, decimos que "A" es un
+        vector de dimensión "n".</p>
+      <p>El formato para declarar un array unidimensional es:
+        tipo nombre[n];
+        donde: n >= 1
+        Para acceder a un elemento del array:
+        nombre[i];
+        donde: 0 <= i < n</p>
+      <br>
+
+      <h3>Array Bidimensionales (Matrices)</h3>
+      <br>
+      <p>Un array en C puede tener una, dos o más dimensiones. Por ejmplo, un array de dos
+dimensiones también denominado matriz, es interpretado como un array
+(umidimensional) de dimensión "f" (número de filas), donde cada componente es un
+array (unidimensional) de dimensión "c" (número de columnas). Un array de dos
+dimensiones, contiene, pues, "f*c" componentes.</p>
+      <p>El formato para declarar un array multidimensionales:
+int nombre[f][c]…;
+donde: f,c...>= 1;
+Para acceder a un elemento del array multidimensional:
+nombre[i][j];
+donde: 0 <= i < f ; 0 <= j < c;
+2
+Durante la declaración de un array multidimensional también podemos inicializar sus
+componentes indicando la lista de los valores entre llaves. En el interior de la lista, los
+componentes de cada línea del array son encerrados nuevamente entre llaves. Para hacer
+más cara la visibilidad de los elementos del array, podemos indicarlos en varias líneas.
+int A[3][4] ={{ 0,1,2,3},
+ { 1,2,3,4},
+ { 2,3,4,5}};
+Sin embargo, es mucho más conveniente anidar dos ciclos para inicializar un array de
+dos dimensiones:
+for (i = 0; i< 3; i++)
+ for (j = 0; j< 4; j++)
+ A[i][j] = i+j;</p>
+      <br>
+
+      <h2>Array Tridimensionales Y Multidimensionales</h2>
+      <br>
+      <p>El arreglo tridimensional o de tres dimensiones, está formado por un conjunto de elementos de un mismo tipo de datos que se almacenan bajo un mismo nombre y que, al igual que en los unidimensionales y bidimensionales, se diferencian por la posición que tiene cada elemento dentro del arreglo de datos, con la aclaración de que la disposición de los elementos es una combinación del arreglo unidimensional y bidimensional</p>
+      <p>Los arreglos multidimensionales son una ampliación de las matrices de dos dimensiones y utilizan subíndices adicionales para la indexación . Un arreglo 3D, por ejemplo, utiliza tres subíndices. Los dos primeros son como una matriz, pero la tercera dimensión representa páginas u hojas de elementos.</p>
+      <br>
+
+      <h2>Asignación de Valores</h2>
+      <br>
+      <p>Asignarle un dato a una variable consiste en reemplazar el valor anterior o inicial de la variable con un valor nuevo. Una vez que se asigna un nuevo valor, el valor anterior es eliminado de la memoria y no es posible recuperarlo.[3] Estos son algunos ejemplos de asignaciones de valores a variable declaradas e inicializadas previamente:
+
+Asignando el carácter 'R' a la variable siguiente_letra
+siguiente_letra := 'R'
+Asignando el valor 24.26 a la variable temperatura
+temperatura := 24.26
+Asignando diferentes valores a diferentes variables en instrucciones consecutivas.
+edad    := 24
+sexo    := 'F'
+en_paro := falso</p>
+      <br>
+
+      <h2>Paso de Argumentos de Array</h2>
+      <br>
+      <p>Un array puede ser pasado como argumento a una función, permitiendo por consiguiente que el array completo sea pasado a la función. Pero en cambio, la manera en que se pasa una variable ordinaria a una función es muy distinta a la forma en como se pasa un array.
+
+Para pasar un array a una función, el nombre del array debe aparacer sólo, sin corchetes ni índices, como un argumento actual dentro de la llamada a la función. El correspondiente argumento formal se escribe de la misma manera, pero debe ser declarado como un array dentro de la declaración de argumentos formales.
+
+Cuando se declara un array unidimensional como un argumento formal, el array se escribe con un par de corchetes cuadrados vacios. El tamaño del array no se especifica dentro de la especificación formal de argumentos.</p>
+      <br>
+      <h2>Arreglos multidimensionales</h2>
+      <br>
+      <p>Los arreglos multidimensionales son una ampliación de las matrices de dos dimensiones y utilizan subíndices adicionales para la indexación. Un arreglo 3D, por ejemplo, utiliza tres subíndices. Los dos primeros son como una matriz, pero la tercera dimensión representa páginas u hojas de elementos.</p>
+      <br>
+      <h2>Array de tipo Cadena (STRING)</h2>
+      <br>
+      <p>Un string es una cadena de caracteres, o lo que es lo mismo un string es un array de chars. Cuando se trabaja con grandes cantidades de texto, es conveniente usar un array de strings. Una características de los strings es el carácter de terminación del string que nos indica dónde acaba la cadena de caracteres.</p>
+      <br>
+      <h2>Interaciones en Array*</h2>
+      <br>
+      <pre>
+        - Array unidimensional: En un array unidimensional se utiliza un solo índice para acceder a cada elemento. Para iterar sobre un array unidimensional, se puede utilizar un bucle for que recorra cada posición del array.
+
+Ejemplo:
+
+
+int miArray[] = {1, 2, 3, 4, 5};
+for (int i = 0; i < sizeof(miArray)/sizeof(miArray[0]); i++) {
+    cout << miArray[i] << endl;
+}
+
+
+- Array bidimensional: En un array bidimensional se utilizan dos índices para acceder a cada elemento. Para iterar sobre un array bidimensional, se pueden utilizar dos bucles for anidados que recorran cada posición del array.
+
+Ejemplo:
+
+
+int miArrayBidimensional[][2] = {{1, 2}, {3, 4}, {5, 6}};
+for (int i = 0; i < sizeof(miArrayBidimensional)/sizeof(miArrayBidimensional[0]); i++) {
+    for (int j = 0; j < sizeof(miArrayBidimensional[0])/sizeof(miArrayBidimensional[0][0]); j++) {
+        cout << miArrayBidimensional[i][j] << endl;
+    }
+}
+
+
+- Array tridimensional: En un array tridimensional se utilizan tres índices para acceder a cada elemento. Para iterar sobre un array tridimensional, se pueden utilizar tres bucles for anidados que recorran cada posición del array.
+
+Ejemplo:
+
+
+int miArrayTridimensional[][2][2] = {{{1, 2}, {3, 4}}, {{5, 6}, {7, 8}}};
+for (int i = 0; i < sizeof(miArrayTridimensional)/sizeof(miArrayTridimensional[0]); i++) {
+    for (int j = 0; j < sizeof(miArrayTridimensional[0])/sizeof(miArrayTridimensional[0][0]); j++) {
+        for (int k = 0; k < sizeof(miArrayTridimensional[0][0])/sizeof(miArrayTridimensional[0][0][0]); k++) {
+            cout << miArrayTridimensional[i][j][k] << endl;
+        }
+    }
+}
+
+
+- Array multidimensional: En un array multidimensional se utilizan n índices para acceder a cada elemento, donde n es el número de dimensiones del array. Para iterar sobre un array multidimensional, se pueden utilizar n bucles for anidados que recorran cada posición del array.
+
+Ejemplo:
+
+
+int miArrayMultidimensional[][2][2][2] = {{{{1, 2}, {3, 4}}, {{5, 6}, {7, 8}}}, {{{9, 10}, {11, 12}}, {{13, 14}, {15, 16}}}};
+for (int i = 0; i < sizeof(miArrayMultidimensional)/sizeof(miArrayMultidimensional[0]); i++) {
+    for (int j = 0; j < sizeof(miArrayMultidimensional[0])/sizeof(miArrayMultidimensional[0][0]); j++) {
+        for (int k = 0; k < sizeof(miArrayMultidimensional[0][0])/sizeof(miArrayMultidimensional[0][0][0]); k++) {
+            for (int l = 0; l < sizeof(miArrayMultidimensional[0][0][0])/sizeof(miArrayMultidimensional[0][0][0][0]); l++) {
+                cout << miArrayMultidimensional[i][j][k][l] << endl;
+            }
+        }
+    }
+}
+      </pre>
+      <br>
 
    <section class="social">
     <p>Universidad</p>
